@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style>
+      ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   overflow:hidden;
+    background-color: #333;
+    text-decoration:none;
+    position:relative;
+
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    margin-right:3vw;
+    text-decoration: none;
+    font-size:x-large;
+}
+
+li a:hover {
+    background-color: #111;
+}
+    
+.logo
+{
+    float:left;
+     display: block;
+    color: white;
+    text-align: center;
+    
+    margin-left:50px;
+    font-size:xx-large;
+    text-decoration: none;
+}  
+      
+body{
+    
+    background-repeat: no-repeat;
+   
+    background-position: top; 
+    background-size:cover;
+ background-image: url('images/society6.png');
+    width:100%;
+ 
+}
+  
+    </style>
+    <asp:ContentPlaceHolder ID="headcontent" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+     
+    <body id="divbody" runat="server" >
+    <form id="form2" runat="server">
+   <ul>
+               
+  <li><a class="active" href="#logout" > <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CausesValidation="False">Log Out</asp:LinkButton></a></li>
+  
+  
+     
+  <li class="logo" >Radio colony<sub style="font-size:large">Kingsway Camp</sub></li>
+</ul>
+        <asp:ContentPlaceHolder ID="maincontent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
